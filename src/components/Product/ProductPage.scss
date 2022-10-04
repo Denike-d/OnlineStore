@@ -1,0 +1,14 @@
+
+.listing__image{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    display: block;
+}
+
+.listing__btn{
+    display: inline-block;
+    border-radius: 11px;
+    color: rgb(112, 53, 206);
+    cursor: pointer; 
+}

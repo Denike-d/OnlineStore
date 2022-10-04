@@ -1,0 +1,25 @@
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    background-color: rgb(255, 241, 224);
+    margin: 3rem 0;
+
+    .about__image{
+        object-fit: fill;
+    }
+    .about__bio{
+        margin: auto;
+    }
+    .about__text{
+        padding: 4rem;
+        h4{
+            font-size: 30px;
+            font-weight: 400;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 200;
+        }
+    }
+}

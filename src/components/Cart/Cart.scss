@@ -1,0 +1,42 @@
+.cart{
+    padding: 1rem 5rem;
+    // background-color: rgb(255, 241, 224);
+    .cart__page{
+        display: flex;
+        justify-content: space-between;
+        margin: 3rem 0;
+    
+    }
+    .cart__details{
+        display: flex;
+        justify-content: space-between;
+      
+    }
+    .cart__np{
+        margin-left: 2rem;
+        width: 10rem
+    }
+    .cart__buttons{
+        button{
+            padding: 0.45rem;
+            color: white;
+        }
+        .cart__btn-r{
+            margin-right: 0.50rem;
+            background-color: red;
+            border: none;
+            color: white;
+            padding: 0.54rem 1rem;
+            border-radius: 0.3rem;
+        }
+        .cart__btn-a{
+            margin-right: 0.50rem;
+            border-radius: 0.3rem;
+            padding: 0.54rem 1rem;
+            background-color: rgb(5, 125, 83);
+            border: none;
+        }
+    }
+
+ 
+}
