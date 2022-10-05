@@ -26,7 +26,7 @@ export default function ProductPage(props) {
       <div className="listing__item">
         <img src={image} width={60} className="listing__image" />
         <div className="listing__content">
-          <p>{title}</p>
+          <p className="title">{title}</p>
           <p>$ {price}</p>
         </div>
         <div className="listing__info">
