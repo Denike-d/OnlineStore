@@ -27,7 +27,7 @@ export default function ProductPage(props) {
         <img src={image} width={60} className="listing__image" />
         <div className="listing__content">
           <p>{title}</p>
-          <p>{price}</p>
+          <p>$ {price}</p>
         </div>
         <div className="listing__info">
           <div className="listing__btn" onClick={addToCartHandler}>

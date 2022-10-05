@@ -8,9 +8,7 @@ const table = ["Products", "Quantity", "Total"];
 export default function CartItem(props) {
   const dispatch = useDispatch();
 
-  const { name, price, id, image, quantity } = props;
-
-  const subTotalPrice = useSelector((state) => state.cart.subTotalPrice);
+  const { name, price, id, image, quantity, totalPrice } = props;
 
   function handleRemoveItem() {
     dispatch(cartActions.removeItemFromCart(id));
@@ -45,11 +43,11 @@ export default function CartItem(props) {
             <p>{quantity}</p>
           </div>
         </div>
-        {/* <div className="cart__total">
+        <div className="cart__total">
           <div>
-            <p>{totalPrice}</p>
+            <p>${totalPrice}</p>
           </div>
-        </div> */}
+        </div>
         <div className="cart__buttons">
           <button className="cart__btn-a" onClick={addToCartHandler}>
             Add

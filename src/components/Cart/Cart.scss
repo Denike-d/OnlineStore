@@ -1,10 +1,11 @@
 .cart{
     padding: 1rem 5rem;
-    // background-color: rgb(255, 241, 224);
+    //background-color: rgb(255, 241, 224);
     .cart__page{
         display: flex;
         justify-content: space-between;
         margin: 3rem 0;
+        // background-color: rgb(255, 241, 224);
     
     }
     .cart__details{
@@ -37,6 +38,10 @@
             border: none;
         }
     }
-
  
+}
+.subtotal{
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: rgb(36, 36, 36);
 }

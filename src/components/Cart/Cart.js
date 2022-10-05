@@ -18,15 +18,15 @@ export default function Cart() {
         {cartItems.map((item) => (
           <CartItem
             name={item.name}
-            price={item.price}
+            price={Math.floor(item.price)}
             id={item.id}
             image={item.image}
             quantity={item.quantity}
-            totalPrice={item.totalPrice}
+            totalPrice={Math.floor(item.totalPrice)}
           />
         ))}
       </div>
-      <p>{subTotalPrice}</p>
+      <p className="subtotal">SubTotal: $ {Math.floor(subTotalPrice)}</p>
     </div>
   );
 }
