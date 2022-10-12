@@ -27,35 +27,49 @@ export default function CartItem(props) {
   return (
     <Fragment>
       <div className="cart__page">
-        <div>
+        <div className="cart__item">
           <div className="cart__details">
             <img src={image} width={100} />
 
             <div className="cart__np">
-              <p>{name}</p>
-              <p>${price}</p>
+              <p>Item: {name}</p>
+
+              <p>${totalPrice}</p>
+
+              <div className="cart__buttons">
+                <button className="cart__btn-a" onClick={addToCartHandler}>
+                  Add
+                </button>
+                <button className="cart__btn-r" onClick={handleRemoveItem}>
+                  Remove
+                </button>
+              </div>
+            </div>
+
+            <div className="cart__quantity">
+              <p>({quantity})</p>
             </div>
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <div className="cart__quantity">
             <p>{quantity}</p>
           </div>
-        </div>
-        <div className="cart__total">
+        </div> */}
+        {/* <div className="cart__total">
           <div>
             <p>${totalPrice}</p>
           </div>
-        </div>
-        <div className="cart__buttons">
+        </div> */}
+        {/* <div className="cart__buttons">
           <button className="cart__btn-a" onClick={addToCartHandler}>
             Add
           </button>
           <button className="cart__btn-r" onClick={handleRemoveItem}>
             Remove
           </button>
-        </div>
+        </div> */}
       </div>
     </Fragment>
   );

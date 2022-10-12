@@ -1,12 +1,15 @@
 .cart{
     padding: 1rem 5rem;
+   
     //background-color: rgb(255, 241, 224);
     .cart__page{
         display: flex;
-        justify-content: space-between;
-        margin: 3rem 0;
-        // background-color: rgb(255, 241, 224);
-    
+        margin: auto;
+    }
+
+    .cart__item{
+        display: flex;
+        margin: 2rem 15rem;
     }
     .cart__details{
         display: flex;
@@ -15,8 +18,9 @@
     }
     .cart__np{
         margin-left: 2rem;
-        width: 10rem
+        width: 20rem
     }
+ 
     .cart__buttons{
         button{
             padding: 0.45rem;
