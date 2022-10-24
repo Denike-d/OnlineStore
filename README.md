@@ -13,3 +13,7 @@ This project was built with redux (a state management tool in react), to manage 
 ### API
 
 - https://fakestoreapi.com/
+
+### Demo
+
+![](shoptal.gif)
