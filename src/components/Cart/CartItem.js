@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
 // import "./Cart.scss";
 import { cartActions } from "../../store/cart-slice";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
 
 const table = ["Products", "Quantity", "Total"];
 
@@ -9,6 +11,29 @@ export default function CartItem(props) {
   const dispatch = useDispatch();
 
   const { name, price, id, image, quantity, totalPrice } = props;
+
+  // Create a reference to the carts collection
+  const cartRef = collection(db, "carts");
+  // const cartsRef = firebase.firestore().collection("carts");
+
+  // Add a new cart item document to the carts collection
+  // const cartItem = {
+  //   id: id,
+  //   price: price,
+  //   name: name,
+  //   image: image,
+  // };
+
+  // cartRef
+  //   .doc(id)
+  //   .collection("carts")
+  //   .add(cartItem)
+  //   .then((docRef) => {
+  //     console.log("Cart item added with ID:", docRef.id);
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error adding cart item:", error);
+  //   });
 
   function handleRemoveItem() {
     dispatch(cartActions.removeItemFromCart(id));
@@ -32,25 +57,32 @@ export default function CartItem(props) {
             <img src={image} width={100} />
 
             <div className="cart__np">
-              <p>Item: {name}</p>
-
-              <p>${totalPrice}</p>
-
+              <p>{name}</p>
               <div className="cart__buttons">
                 <button className="cart__btn-a" onClick={addToCartHandler}>
-                  Add
+                  <strong>Add</strong>
                 </button>
                 <button className="cart__btn-r" onClick={handleRemoveItem}>
-                  Remove
+                  <strong>Remove</strong>
                 </button>
               </div>
             </div>
 
             <div className="cart__quantity">
-              <p>({quantity})</p>
+              <p style={{ fontWeight: "500" }}>${totalPrice}</p>
+              <p
+                style={{
+                  border: "1px solid grey",
+                  padding: "2px 20px",
+                  borderRadius: "5px",
+                }}
+              >
+                Qty: {quantity}
+              </p>
             </div>
           </div>
         </div>
+        <hr></hr>
 
         {/* <div>
           <div className="cart__quantity">

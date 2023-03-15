@@ -1,51 +1,75 @@
 .cart{
-    padding: 1rem 5rem;
-   
-    //background-color: rgb(255, 241, 224);
-    .cart__page{
-        display: flex;
-        margin: auto;
-    }
+      margin: 3rem;
+     display: flex;
+     gap: 2rem;
+    .cart-items{
+        grid-auto-columns: repeat(1, 1fr);
+        background-color: white;
+        width: 60%;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid rgb(232, 232, 232);
+    
+        .cart__page{
+            // display: flex; 
+            
+        }
+    
+        .cart__item{
+            display: flex;
+            padding: 1rem;
+            // margin: 2rem 15rem;
+           
+        }
+        .cart__details{
+            display: flex;
+            justify-content: space-between;
 
-    .cart__item{
-        display: flex;
-        margin: 2rem 15rem;
-    }
-    .cart__details{
-        display: flex;
-        justify-content: space-between;
+            .cart__np{
+                margin-left: 2rem;
+                width: 20rem
+            }
+          
+          
+        }
       
-    }
-    .cart__np{
-        margin-left: 2rem;
-        width: 20rem
-    }
- 
-    .cart__buttons{
-        button{
-            padding: 0.45rem;
-            color: white;
+     
+        .cart__buttons{
+            button{
+                padding: 0.45rem;
+                color: white;
+            }
+            .cart__btn-r{
+                margin-right: 0.50rem;
+                background-color: white;
+                border: 1px solid red;
+                color: red;
+                padding: 0.54rem 1rem;
+                border-radius: 0.3rem;
+            }
+            .cart__btn-a{
+                margin-right: 0.50rem;
+                border-radius: 0.3rem;
+                padding: 0.54rem 1rem;
+                color: #599efe;
+                border: 1px solid #599efe;
+                background-color: white;
+            }
         }
-        .cart__btn-r{
-            margin-right: 0.50rem;
-            background-color: red;
-            border: none;
-            color: white;
-            padding: 0.54rem 1rem;
-            border-radius: 0.3rem;
-        }
-        .cart__btn-a{
-            margin-right: 0.50rem;
-            border-radius: 0.3rem;
-            padding: 0.54rem 1rem;
-            background-color: rgb(5, 125, 83);
-            border: none;
-        }
+     
     }
- 
+    .checkout{
+        background-color: white;
+        width: 20%;
+        height: max-content;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid rgb(232, 232, 232);
+    }
+    .subtotal{
+        font-weight: 500;
+        font-size: 1rem;
+        color: rgb(36, 36, 36);
+    }
 }
-.subtotal{
-    font-weight: 500;
-    font-size: 1.5rem;
-    color: rgb(36, 36, 36);
-}
+

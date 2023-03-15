@@ -1,10 +1,12 @@
 .data {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    
     // grid-template-columns: repeat(auto-fill, minmax(252px, 1fr));
     grid-gap: 2rem;
     margin: 3rem 0;
-    padding: 2rem;
+    padding: 3rem;
+    // grid-auto-columns: 1fr;
     
    
 }

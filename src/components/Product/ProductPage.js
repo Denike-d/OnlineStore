@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function ProductPage(props) {
   const { id, title, key, price, image } = props;
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -24,15 +25,18 @@ export default function ProductPage(props) {
   return (
     <div key={key}>
       <div className="listing__item">
-        <img src={image} width={60} className="listing__image" />
-        <div className="listing__content">
-          <p className="title">{title}</p>
-          <p>$ {price}</p>
-        </div>
-        <div className="listing__info">
-          <div className="listing__btn" onClick={addToCartHandler}>
-            Add to cart
-            <img src="" />
+        <div className="item-container">
+          <div style={{ width: "120px" }}>
+            <img src={image} className="listing__image" />
+          </div>
+          <div className="listing__content">
+            <p>$ {price}</p>
+            <p className="title">{title}</p>
+          </div>
+          <div className="listing__info">
+            <div className="listing__btn" onClick={addToCartHandler}>
+              Add to cart
+            </div>
           </div>
         </div>
       </div>

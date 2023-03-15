@@ -1,0 +1,30 @@
+.deals-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border: 1px solid rgb(216, 216, 216);
+    margin: 2rem 4rem;
+    background-color: white;
+    height: 257px;
+
+    .items{
+        display: flex;
+        border-left: 1px solid rgb(216, 216, 216);
+        padding-top: 2rem;
+        justify-content: center;
+        list-style: none;
+
+        .image-container{
+            width: 100px;
+            height: 110px;
+    
+            img{
+                width: 100%;
+            }
+        }
+        .item-details{
+            margin-top: 2rem;
+        }
+    }
+    }
+
+   
