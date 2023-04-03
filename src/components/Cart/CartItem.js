@@ -10,7 +10,7 @@ const table = ["Products", "Quantity", "Total"];
 export default function CartItem(props) {
   const dispatch = useDispatch();
 
-  const { name, price, id, image, quantity, totalPrice } = props;
+  const { name, price, id, image, quantity, totalPrice, cart_quantity } = props;
 
   // Create a reference to the carts collection
   const cartRef = collection(db, "carts");
@@ -46,6 +46,7 @@ export default function CartItem(props) {
         price: price,
         name: name,
         image: image,
+        cart_quantity: cart_quantity,
       })
     );
   }
@@ -77,7 +78,7 @@ export default function CartItem(props) {
                   borderRadius: "5px",
                 }}
               >
-                Qty: {quantity}
+                Qty: {cart_quantity}
               </p>
             </div>
           </div>

@@ -1,21 +1,20 @@
 import Cart from "./components/Cart/Cart";
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Home from "./components/Home";
-import Login from "./components/Login/Login";
+import Payment from "./components/Payment/Payment";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 
 function App() {
-  const [token, setToken] = useState();
-
-  // if (!token) {
-  //   return <Login setToken={setToken} />;
-  // }
-
   return (
     <div>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<Login />} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/home" element={<Home />} />
         <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/payment" element={<Payment />} />
       </Routes>
     </div>
   );

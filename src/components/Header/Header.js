@@ -1,15 +1,16 @@
 import React, { Fragment } from "react";
 import "./Header.scss";
+import { Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import ShoppingCart from "./ShoppingCart.svg";
+import Vector from "./Vector.png";
 import UserAvatar from "./UserAvatar.svg";
 
 export default function Header() {
   return (
     <Fragment>
       <nav className="header">
-        <h4 style={{ color: "rgb(252, 182, 96)" }}>Avion</h4>
-        <ul>
+        <h4 style={{ color: "#09758", fontSize: "1.1rem" }}>eZon</h4>
+        {/* <ul>
           <li>
             <AnchorLink href="#">Jewelry</AnchorLink>
           </li>
@@ -25,14 +26,14 @@ export default function Header() {
           <li>
             <AnchorLink href="#project">Glasses</AnchorLink>
           </li>
-        </ul>
-        <div>
-          {/* <a href="/cart">
-            <img src={ShoppingCart} width={26} />
-          </a> */}
-          <a href="#">
+        </ul> */}
+        <div className="icons">
+          {/* <a href="#">
             <img src={UserAvatar} width={26} />
-          </a>
+          </a> */}
+          <Link to="/cart">
+            <img src={Vector} width={26} style={{ textColor: "white" }} />
+          </Link>
         </div>
       </nav>
       <div>

@@ -5,7 +5,7 @@ import "./ProductPage.scss";
 import { useNavigate } from "react-router-dom";
 
 export default function ProductPage(props) {
-  const { id, title, key, price, image } = props;
+  const { id, title, key, price, image, quantity } = props;
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -16,8 +16,10 @@ export default function ProductPage(props) {
       cartActions.addItemToCart({
         id: id,
         price: price,
+        quantity: quantity,
         title: title,
         image: image,
+        cart_quantity: 1,
       })
     );
   }

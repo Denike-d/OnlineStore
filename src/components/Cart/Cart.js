@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Cart.scss";
 import { cartActions } from "../../store/cart-slice";
 import CartItem from "./CartItem";
+import { Link } from "react-router-dom";
 
 export default function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
@@ -11,9 +12,25 @@ export default function Cart() {
 
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
-  window.localStorage.setItem("cartItems", cartItems);
+  // window.localStorage.setItem("cartItems", cartItems);
 
-  console.log(cartItems.id);
+  // const getNewCartData = () => {
+  //   let localCartData = localStorage.getItem("avionCartItems");
+  //   if (localCartData === []) {
+  //     return [];
+  //   } else {
+  //     return JSON.parse(localCartData);
+  //   }
+  // };
+
+  // const cartItem = getNewCartData(cartItems);
+
+  // console.log(cartItems.id);
+
+  // useEffect(() => {
+  //   localStorage.setItem("avionCartItems", JSON.stringify(cartItems));
+
+  // }, [cartItems]);
 
   return (
     <>
@@ -28,6 +45,7 @@ export default function Cart() {
               image={item.image}
               quantity={item.quantity}
               totalPrice={Math.floor(item.totalPrice)}
+              cart_quantity={Math.floor(item.cart_quantity)}
             />
           ))}
         </div>
@@ -66,19 +84,21 @@ export default function Cart() {
             <p>$0</p>
           </div>
           <hr></hr>
-          <p
-            style={{
-              backgroundColor: "#8CB7F5",
-              display: "inline-block",
-              padding: "0.5rem 1rem",
-              color: "black",
-              borderRadius: "5px",
-              justifyContent: "center",
-              margin: "0.5rem 4rem",
-            }}
-          >
-            Checkout
-          </p>
+          <Link to="/payment">
+            <p
+              style={{
+                backgroundColor: "#8CB7F5",
+                display: "inline-block",
+                padding: "0.5rem 1rem",
+                color: "black",
+                borderRadius: "5px",
+                justifyContent: "center",
+                margin: "0.5rem 4rem",
+              }}
+            >
+              Checkout
+            </p>
+          </Link>
         </div>
       </div>
     </>
