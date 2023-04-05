@@ -34,7 +34,9 @@ export default function Cart() {
 
   return (
     <>
-      <h3>My Cart ({totalQuantity})</h3>
+      <h3 style={{ marginLeft: "3rem", color: "#599efe" }}>
+        My Cart Items ({totalQuantity})
+      </h3>
       <div className="cart">
         <div className="cart-items">
           {cartItems.map((item) => (

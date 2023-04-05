@@ -41,7 +41,9 @@ export default function Register() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button onClick={register}>Register</button>
+          <button onClick={register} className="paystack-button">
+            Login
+          </button>
         </div>
       </div>
     </div>

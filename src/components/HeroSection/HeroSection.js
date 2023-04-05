@@ -11,7 +11,9 @@ export default function HeroSection() {
         </div>
         <div className="about__bio">
           <div className="about__text">
-            <h4 style={{ color: "#599efe", fontWeight: "bold" }}>
+            <h4
+              style={{ color: "black", fontWeight: "bold", fontSize: "3rem" }}
+            >
               Welcome to our online store!
             </h4>
             <p>

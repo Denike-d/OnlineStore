@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <Fragment>
       <nav className="header">
-        <h4 style={{ color: "#09758", fontSize: "1.1rem" }}>eZon</h4>
+        <h4 style={{ color: "#09758", fontSize: "1.1rem" }}>Shopty</h4>
         {/* <ul>
           <li>
             <AnchorLink href="#">Jewelry</AnchorLink>
@@ -34,6 +34,9 @@ export default function Header() {
           <Link to="/cart">
             <img src={Vector} width={26} style={{ textColor: "white" }} />
           </Link>
+          {/* <Link to="/">
+            <p>Logout</p>
+          </Link> */}
         </div>
       </nav>
       <div>

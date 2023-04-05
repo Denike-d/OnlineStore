@@ -19,6 +19,8 @@ export default function Register() {
   useEffect(() => {
     if (user) {
       navigate("/home");
+    } else {
+      return;
     }
   }, [user]);
 
@@ -50,7 +52,9 @@ export default function Register() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button onClick={register}>Register</button>
+          <button onClick={register} className="paystack-button">
+            Register
+          </button>
         </div>
       </div>
     </div>
