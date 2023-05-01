@@ -9,14 +9,10 @@ This project was built with redux (a state management tool in react), to manage 
 - React js
 - Redux
 - Scss
-
-
-### Demo
-
-![](shoptal.gif)
+- Firebase
 
 ### Live project link
 
-https://avion-store.vercel.app/
+https://avion-store.vercel.app
 
 
