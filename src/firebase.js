@@ -7,7 +7,7 @@ import {
 } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
+  apiKey: "AIzaSyAbxYk7u5Ek83A0t42TSGzZi5SuUfiDbYM",
   authDomain: "e-commerce-b7c4e.firebaseapp.com",
   projectId: "e-commerce-b7c4e",
   storageBucket: "e-commerce-b7c4e.appspot.com",
