@@ -10,9 +10,6 @@ This project was built with redux (a state management tool in react), to manage 
 - Redux
 - Scss
 
-### API
-
-- https://fakestoreapi.com/
 
 ### Demo
 
